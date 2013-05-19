@@ -11,8 +11,7 @@
 @interface ImageScrollViewController () <UIScrollViewDelegate>
 
 @property (strong, nonatomic) UIImageView *imageView;
-@property (strong, nonatomic) UIScrollView *scrollView;
-
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -25,24 +24,10 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self createScrollView];
+    self.scrollView.delegate = self;
     [self createImageView];
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view setNeedsUpdateConstraints];
-}
-
-- (void) createScrollView {
-    self.scrollView = [[UIScrollView alloc] init];
-    self.scrollView.delegate = self;
-    self.scrollView.maximumZoomScale = 3;
-    self.scrollView.minimumZoomScale = 0.2;
-    
-    [self.scrollView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
-    [self.view addSubview:self.scrollView];
-    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_scrollView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_scrollView)]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_scrollView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_scrollView)]];
 }
 
 - (void) createImageView {
