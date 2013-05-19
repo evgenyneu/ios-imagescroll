@@ -18,6 +18,7 @@
 		2B97BF151748425C0094564B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B97BF141748425C0094564B /* Default-568h@2x.png */; };
 		2B97BF181748425C0094564B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B97BF161748425C0094564B /* MainStoryboard.storyboard */; };
 		2B97BF1B1748425C0094564B /* ImageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B97BF1A1748425C0094564B /* ImageScrollViewController.m */; };
+		2B97BF221748476A0094564B /* wallabi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B97BF211748476A0094564B /* wallabi.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		2B97BF171748425C0094564B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		2B97BF191748425C0094564B /* ImageScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageScrollViewController.h; sourceTree = "<group>"; };
 		2B97BF1A1748425C0094564B /* ImageScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageScrollViewController.m; sourceTree = "<group>"; };
+		2B97BF211748476A0094564B /* wallabi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallabi.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +85,7 @@
 		2B97BF041748425C0094564B /* ImageScroll */ = {
 			isa = PBXGroup;
 			children = (
-				2B97BF0D1748425C0094564B /* ImageScrollAppDelegate.h */,
-				2B97BF0E1748425C0094564B /* ImageScrollAppDelegate.m */,
+				2B97BF211748476A0094564B /* wallabi.jpg */,
 				2B97BF161748425C0094564B /* MainStoryboard.storyboard */,
 				2B97BF191748425C0094564B /* ImageScrollViewController.h */,
 				2B97BF1A1748425C0094564B /* ImageScrollViewController.m */,
@@ -96,6 +97,8 @@
 		2B97BF051748425C0094564B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2B97BF0D1748425C0094564B /* ImageScrollAppDelegate.h */,
+				2B97BF0E1748425C0094564B /* ImageScrollAppDelegate.m */,
 				2B97BF061748425C0094564B /* ImageScroll-Info.plist */,
 				2B97BF071748425C0094564B /* InfoPlist.strings */,
 				2B97BF0A1748425C0094564B /* main.m */,
@@ -164,6 +167,7 @@
 				2B97BF131748425C0094564B /* Default@2x.png in Resources */,
 				2B97BF151748425C0094564B /* Default-568h@2x.png in Resources */,
 				2B97BF181748425C0094564B /* MainStoryboard.storyboard in Resources */,
+				2B97BF221748476A0094564B /* wallabi.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
