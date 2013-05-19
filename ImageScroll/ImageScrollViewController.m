@@ -38,7 +38,7 @@
  Three things to note here:
  1) Constraints are added to self.view and not to self.scrollView. Otherwise the picture will jump when zooming.
  2) Notice that top and left edges have priority 750, and right and bottom have 250.
- 3) Using 'greater than' instead of equality to allow centering in addConstraintsToCenterImage.*/
+ 3) Using '>=' instead of equality to allow centering in addConstraintsToCenterImage.*/
 - (void) addConstraintsForImageEdges {
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(>=0@750)-[_imageView]-(>=0@250)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_imageView)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(>=0@750)-[_imageView]-(>=0@250)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_imageView)]];
