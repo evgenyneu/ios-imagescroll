@@ -2,7 +2,7 @@
 
 This is a sample XCode project that shows how to use image view inside a scroll view with auto layout on iOS 6.
 
-Image can be panned and zoomed. Image is centered and zoomed out initially.
+Image can be panned and zoomed. It is centered and zoomed out initially.
 
 # Things to note
 
