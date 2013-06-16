@@ -22,7 +22,7 @@
     [super viewWillAppear:animated];
     
     self.scrollView.delegate = self;
-    [self initImageView];
+//    [self initImageView];
     [self initZoom];
 }
 
