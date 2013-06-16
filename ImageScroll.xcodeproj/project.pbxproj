@@ -265,6 +265,7 @@
 		2B97BF1F1748425C0094564B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageScroll/ImageScroll-Prefix.pch";
 				INFOPLIST_FILE = "ImageScroll/ImageScroll-Info.plist";
@@ -276,6 +277,7 @@
 		2B97BF201748425C0094564B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageScroll/ImageScroll-Prefix.pch";
 				INFOPLIST_FILE = "ImageScroll/ImageScroll-Info.plist";
@@ -303,6 +305,7 @@
 				2B97BF201748425C0094564B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
