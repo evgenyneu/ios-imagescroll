@@ -8,9 +8,8 @@ Image can be panned and zoomed. It is centered and zoomed out initially.
 
 # Things to note
 
+* All constrains are set in storyboard. No code is required.
 * Remeber to add max zoom for scroll view in Interface Builder.
-* Constraints for scroll view are removed programmatically and new constraints are added instead.
-* With auto layout there is no need to set frames and scroll view's contentSize.
 * Feel free to contact me if you are stuck (like I was).
 
 # Thanks
