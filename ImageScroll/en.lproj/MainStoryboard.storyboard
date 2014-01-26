@@ -20,8 +20,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" ambiguous="YES" minimumZoomScale="0.20000000000000001" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="OdA-la-nwK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wallabi.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VYT-5l-DKu">
-                                        <rect key="frame" x="0.0" y="0.0" width="1280" height="1707"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYT-5l-DKu">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,9 +54,6 @@
             <point key="canvasLocation" x="-313" y="-242"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="wallabi.jpg" width="1280" height="1707"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

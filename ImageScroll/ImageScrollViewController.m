@@ -20,7 +20,9 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+
+    self.imageView.image = [UIImage imageNamed: @"wallabi.jpg"];
+
     self.scrollView.delegate = self;
     [self initZoom];
 }
