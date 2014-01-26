@@ -12,7 +12,7 @@ Image can be panned and zoomed. It is centered and zoomed out initially.
 * Make note of constraints' priorities and 'content hugging' priority of the image view.
 * Remember to add max zoom for scroll view in Interface Builder.
 * Feel free to contact me if you are stuck (like I was).
-* There is a random issue on zooming, when the image appear off center.
+* There is one issue I could not fix: sometimes on zooming image appears off-center.
 
 # Thanks
 
