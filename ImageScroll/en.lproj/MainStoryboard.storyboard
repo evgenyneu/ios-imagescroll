@@ -17,22 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" ambiguous="YES" minimumZoomScale="0.20000000000000001" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="OdA-la-nwK">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" minimumZoomScale="0.20000000000000001" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="OdA-la-nwK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="VYT-5l-DKu">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="VYT-5l-DKu">
                                         <rect key="frame" x="110" y="234" width="100" height="100"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="VYT-5l-DKu" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OdA-la-nwK" secondAttribute="bottom" id="SwN-36-sOr"/>
-                                    <constraint firstItem="VYT-5l-DKu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OdA-la-nwK" secondAttribute="top" id="XxH-XZ-0Yd"/>
-                                    <constraint firstItem="VYT-5l-DKu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OdA-la-nwK" secondAttribute="trailing" id="hai-jp-QfV"/>
-                                    <constraint firstItem="VYT-5l-DKu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OdA-la-nwK" secondAttribute="leading" id="ozy-va-BcY"/>
-                                    <constraint firstAttribute="centerY" secondItem="VYT-5l-DKu" secondAttribute="centerY" priority="500" id="ylF-PD-vLX"/>
-                                    <constraint firstAttribute="centerX" secondItem="VYT-5l-DKu" secondAttribute="centerX" priority="500" id="ywo-r3-vez"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
