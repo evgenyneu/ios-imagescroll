@@ -28,12 +28,12 @@
   self.imageView.image = [UIImage imageNamed: @"wallabi.jpg"];
 
   self.scrollView.delegate = self;
-  [self initZoom];
+  [self updateZoom];
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-  [self initZoom];
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration {
+  [super willAnimateRotationToInterfaceOrientation:interfaceOrientation duration:duration];
+  [self updateZoom];
 }
 
 - (void) scrollViewDidZoom:(UIScrollView *)scrollView {
@@ -60,14 +60,17 @@
   self.constraintBottom.constant = vPadding;
 }
 
-// Zoom to show as much image as possible
-- (void) initZoom {
+
+- (void) updateZoom {
   float minZoom = MIN(self.view.bounds.size.width / self.imageView.image.size.width,
                       self.view.bounds.size.height / self.imageView.image.size.height);
+
   if (minZoom > 1) return;
 
+  // Prevent excessive zoom out
   self.scrollView.minimumZoomScale = minZoom;
 
+  // Zoom to show as much image as possible
   self.scrollView.zoomScale = minZoom;
 }
 
