@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintRight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintTop;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintBottom;
+@property (weak, nonatomic) IBOutlet UIButton *changeImageButton;
 
 @end
 
@@ -35,6 +36,17 @@
   [super willAnimateRotationToInterfaceOrientation:interfaceOrientation duration:duration];
   [self updateZoom];
   if (self.scrollView.zoomScale == 1) self.scrollView.zoomScale = 1.0001;
+}
+
+- (IBAction)onImageChangeTouched:(id)sender {
+  self.changeImageButton.selected = !self.changeImageButton.isSelected;
+  [self.changeImageButton invalidateIntrinsicContentSize];
+
+  NSString *fileName = @"wallabi.jpg";
+  if (self.changeImageButton.selected ) fileName = @"wallabi_small.jpg";
+
+  self.imageView.image = [UIImage imageNamed: fileName];
+  [self updateZoom];
 }
 
 - (void) scrollViewDidZoom:(UIScrollView *)scrollView {

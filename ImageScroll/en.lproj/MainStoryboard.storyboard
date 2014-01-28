@@ -32,17 +32,32 @@
                                     <constraint firstItem="VYT-5l-DKu" firstAttribute="top" secondItem="OdA-la-nwK" secondAttribute="top" constant="234" id="cBr-2i-6xb"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibs-K7-hcn">
+                                <rect key="frame" x="237" y="20" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="View small">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.059766057480000002" green="0.1305306312" blue="0.063332435790000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="View large"/>
+                                <connections>
+                                    <action selector="onImageChangeTouched:" destination="2" eventType="touchUpInside" id="r72-a2-ChJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OdA-la-nwK" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="8AI-m0-lwA"/>
                             <constraint firstAttribute="bottom" secondItem="OdA-la-nwK" secondAttribute="bottom" id="bWh-9q-lwl"/>
                             <constraint firstAttribute="trailing" secondItem="OdA-la-nwK" secondAttribute="trailing" id="oPh-hL-ohC"/>
+                            <constraint firstAttribute="trailing" secondItem="Ibs-K7-hcn" secondAttribute="trailing" constant="10" id="rUY-84-209"/>
+                            <constraint firstItem="Ibs-K7-hcn" firstAttribute="top" secondItem="k2f-5M-geG" secondAttribute="bottom" id="vco-Qg-Jcx"/>
                             <constraint firstItem="OdA-la-nwK" firstAttribute="top" secondItem="3" secondAttribute="top" id="zae-Ra-yiS"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
+                        <outlet property="changeImageButton" destination="Ibs-K7-hcn" id="1jy-Rl-9G3"/>
                         <outlet property="constraintBottom" destination="OJJ-2N-lik" id="5hG-aH-TXR"/>
                         <outlet property="constraintLeft" destination="WP6-ke-dAB" id="TCy-3U-jaN"/>
                         <outlet property="constraintRight" destination="3NM-Ag-kuw" id="WGY-mu-o08"/>
