@@ -34,6 +34,7 @@
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration {
   [super willAnimateRotationToInterfaceOrientation:interfaceOrientation duration:duration];
   [self updateZoom];
+  if (self.scrollView.zoomScale == 1) self.scrollView.zoomScale = 1.0001;
 }
 
 - (void) scrollViewDidZoom:(UIScrollView *)scrollView {
@@ -60,14 +61,13 @@
   self.constraintBottom.constant = vPadding;
 }
 
-
 - (void) updateZoom {
   float minZoom = MIN(self.view.bounds.size.width / self.imageView.image.size.width,
                       self.view.bounds.size.height / self.imageView.image.size.height);
 
-  if (minZoom > 1) return;
+  if (minZoom > 1) minZoom = 1;
 
-  // Prevent excessive zoom out
+  // Prevent from zooming out too much
   self.scrollView.minimumZoomScale = minZoom;
 
   // Zoom to show as much image as possible

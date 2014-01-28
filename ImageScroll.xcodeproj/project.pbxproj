@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B7CB30B18972758009FD635 /* wallabi_small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B7CB30A18972758009FD635 /* wallabi_small.jpg */; };
 		2B97BEFF1748425C0094564B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B97BEFE1748425C0094564B /* UIKit.framework */; };
 		2B97BF011748425C0094564B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B97BF001748425C0094564B /* Foundation.framework */; };
 		2B97BF031748425C0094564B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B97BF021748425C0094564B /* CoreGraphics.framework */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B7CB30A18972758009FD635 /* wallabi_small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallabi_small.jpg; sourceTree = "<group>"; };
 		2B97BEFB1748425C0094564B /* ImageScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B97BEFE1748425C0094564B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2B97BF001748425C0094564B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,6 +87,7 @@
 		2B97BF041748425C0094564B /* ImageScroll */ = {
 			isa = PBXGroup;
 			children = (
+				2B7CB30A18972758009FD635 /* wallabi_small.jpg */,
 				2B97BF211748476A0094564B /* wallabi.jpg */,
 				2B97BF161748425C0094564B /* MainStoryboard.storyboard */,
 				2B97BF191748425C0094564B /* ImageScrollViewController.h */,
@@ -165,6 +168,7 @@
 				2B97BF091748425C0094564B /* InfoPlist.strings in Resources */,
 				2B97BF111748425C0094564B /* Default.png in Resources */,
 				2B97BF131748425C0094564B /* Default@2x.png in Resources */,
+				2B7CB30B18972758009FD635 /* wallabi_small.jpg in Resources */,
 				2B97BF151748425C0094564B /* Default-568h@2x.png in Resources */,
 				2B97BF181748425C0094564B /* MainStoryboard.storyboard in Resources */,
 				2B97BF221748476A0094564B /* wallabi.jpg in Resources */,
