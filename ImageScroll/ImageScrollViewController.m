@@ -69,6 +69,7 @@
   self.constraintBottom.constant = vPadding;
 }
 
+// Zoom to show as much image as possible unless image is smaller than screen
 - (void) updateZoom {
   float minZoom = MIN(self.view.bounds.size.width / self.imageView.image.size.width,
                       self.view.bounds.size.height / self.imageView.image.size.height);
@@ -77,7 +78,6 @@
 
   self.scrollView.minimumZoomScale = minZoom;
 
-  // Zoom to show as much image as possible
   self.scrollView.zoomScale = minZoom;
 }
 
