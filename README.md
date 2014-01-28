@@ -1,6 +1,6 @@
 # Scroll view image with auto layout in iOS
 
-This is a sample XCode project that shows how to use image view inside a scroll view with auto layout on iOS.
+This is a demo iOS app that shows how to use image view inside a scroll view with auto layout.
 
 Image can be panned and zoomed. It is centered and zoomed out initially.
 
@@ -8,11 +8,10 @@ Image can be panned and zoomed. It is centered and zoomed out initially.
 
 # Things to note
 
-* All constrains are set in storyboard. No code for adding constraints is required.
-* Make note of constraints' priorities and 'content hugging' priority of the image view.
+* The job is done with auto layout constraints only.
+* On each zoom we update the `constant` values for the constraints to center the image if needed.
 * Remember to add max zoom for scroll view in Interface Builder.
 * Feel free to contact me if you are stuck (like I was).
-* There is one issue I could not fix: sometimes on zooming image appears off-center.
 
 # Thanks
 
