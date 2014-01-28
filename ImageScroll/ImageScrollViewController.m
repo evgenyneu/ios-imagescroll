@@ -27,26 +27,21 @@
   [super viewWillAppear:animated];
 
   self.imageView.image = [UIImage imageNamed: @"wallabi.jpg"];
-
   self.scrollView.delegate = self;
+
   [self updateZoom];
 }
 
+// Update zoom scale and constraints
+// It will also animate because willAnimateRotationToInterfaceOrientation
+// is called from within an animation block
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration {
   [super willAnimateRotationToInterfaceOrientation:interfaceOrientation duration:duration];
+
   [self updateZoom];
+
+  // A hack needed for small images to animate properly on orientation change
   if (self.scrollView.zoomScale == 1) self.scrollView.zoomScale = 1.0001;
-}
-
-- (IBAction)onImageChangeTouched:(id)sender {
-  self.changeImageButton.selected = !self.changeImageButton.isSelected;
-  [self.changeImageButton invalidateIntrinsicContentSize];
-
-  NSString *fileName = @"wallabi.jpg";
-  if (self.changeImageButton.selected ) fileName = @"wallabi_small.jpg";
-
-  self.imageView.image = [UIImage imageNamed: fileName];
-  [self updateZoom];
 }
 
 - (void) scrollViewDidZoom:(UIScrollView *)scrollView {
@@ -60,6 +55,7 @@
   float viewWidth = self.view.bounds.size.width;
   float viewHeight = self.view.bounds.size.height;
 
+  // center image if it is smaller than screen
   float hPadding = (viewWidth - self.scrollView.zoomScale * imageWidth) / 2;
   if (hPadding < 0) hPadding = 0;
 
@@ -79,7 +75,6 @@
 
   if (minZoom > 1) minZoom = 1;
 
-  // Prevent from zooming out too much
   self.scrollView.minimumZoomScale = minZoom;
 
   // Zoom to show as much image as possible
@@ -88,6 +83,17 @@
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
   return self.imageView;
+}
+
+- (IBAction)onImageChangeTouched:(id)sender {
+  self.changeImageButton.selected = !self.changeImageButton.isSelected;
+  [self.changeImageButton invalidateIntrinsicContentSize];
+
+  NSString *fileName = @"wallabi.jpg";
+  if (self.changeImageButton.selected ) fileName = @"wallabi_small.jpg";
+
+  self.imageView.image = [UIImage imageNamed: fileName];
+  [self updateZoom];
 }
 
 @end
