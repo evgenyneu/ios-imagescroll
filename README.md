@@ -15,11 +15,20 @@ Image can be panned and zoomed. It is centered and zoomed out initially.
 ## How to copy this control to your project
 
 * Check 'Use Autolayout' for your storyboard.
-* Copy Image Scroll View Controller into your storyboard.
-* Change your view controller class to ImageScrollViewController in Identity Inspector.
-* Copy all controls from the storybord: View, ScrollView and ImageView along with all their constraints.
-* In ScrollView, set Min and Max zoom levels in Attributes Inspector.
-* Connect ImageView, ScrollView, four layout constraints and 'change image' button to their outlets in `ImageScrollViewController.m`.
+* Copy Image Scroll View Controller into your storyboard, like this:
+* Copy files `ImageScrollViewController.m` and `ImageScrollViewController.h` into your project.
+
+<img src='https://raw.github.com/evgenyneu/ios-imagescroll/master/copy_image_scroll_view_controller.png' width='357' alt='Copy Image View Controller'>
+
+
+## Troubleshooting
+
+Please make sure:
+
+* Your view controller's class has ImageScrollViewController (Identity Inspector).
+* VC storybord has all the controlls: View, ScrollView and ImageView along with all their constraints.
+* To anable zooming ScrollView's 'max zoom' should be greater than 1 (Attributes Inspector). I used 3 in this demo.
+* ImageView, ScrollView, four layout constraints and 'change image' button shuold be linked to their to their outlets in `ImageScrollViewController.m`.
 
 ## Thanks
 
