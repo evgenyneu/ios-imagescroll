@@ -28,7 +28,7 @@ Please make sure:
 * Your view controller's class is ImageScrollViewController (Identity Inspector).
 * VC storybord has all the controlls: View, ScrollView and ImageView along with all their constraints.
 * To anable zooming ScrollView's 'max zoom' should be greater than 1 (Attributes Inspector). I used 3 in this demo.
-* ImageView, ScrollView, four layout constraints and 'change image' button shuold be linked to their to their outlets in `ImageScrollViewController.m`.
+* ImageView, ScrollView, four layout constraints and 'change image' button should be linked to their outlets in `ImageScrollViewController.m`.
 
 ## Thanks
 
