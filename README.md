@@ -25,7 +25,7 @@ Image can be panned and zoomed. It is centered and zoomed out initially.
 
 Please make sure:
 
-* Your view controller's class has ImageScrollViewController (Identity Inspector).
+* Your view controller's class is ImageScrollViewController (Identity Inspector).
 * VC storybord has all the controlls: View, ScrollView and ImageView along with all their constraints.
 * To anable zooming ScrollView's 'max zoom' should be greater than 1 (Attributes Inspector). I used 3 in this demo.
 * ImageView, ScrollView, four layout constraints and 'change image' button shuold be linked to their to their outlets in `ImageScrollViewController.m`.
