@@ -18,17 +18,17 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintTop;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintBottom;
 @property (weak, nonatomic) IBOutlet UIButton *changeImageButton;
+@property (nonatomic) CGFloat lastZoomScale;
 
 @end
 
 @implementation ImageScrollViewController
 
-- (void) viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
+- (void) viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
 
   self.imageView.image = [UIImage imageNamed: @"wallabi.jpg"];
   self.scrollView.delegate = self;
-
   [self updateZoom];
 }
 
@@ -39,9 +39,6 @@
   [super willAnimateRotationToInterfaceOrientation:interfaceOrientation duration:duration];
 
   [self updateZoom];
-
-  // A hack needed for small images to animate properly on orientation change
-  if (self.scrollView.zoomScale == 1) self.scrollView.zoomScale = 1.0001;
 }
 
 - (void) scrollViewDidZoom:(UIScrollView *)scrollView {
@@ -78,7 +75,10 @@
 
   self.scrollView.minimumZoomScale = minZoom;
 
-  self.scrollView.zoomScale = minZoom;
+  // Force scrollViewDidZoom fire if zoom did not change
+  if (minZoom == self.lastZoomScale) minZoom += 0.000001;
+
+  self.lastZoomScale = self.scrollView.zoomScale = minZoom;
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
