@@ -32,6 +32,7 @@ Please make sure:
 
 ## Thanks
 
-* [William Warby](https://www.flickr.com/photos/wwarby) for makeing the wallaby photo http://www.flickr.com/photos/wwarby
-* [cojoj](https://github.com/cojoj) for fixing [layout bug](https://github.com/evgenyneu/ios-imagescroll/issues/5) in iOS 8
+* [William Warby](https://www.flickr.com/photos/wwarby) for making the wallaby photo. http://www.flickr.com/photos/wwarby
+
+* [cojoj](https://github.com/cojoj) for fixing [layout bug](https://github.com/evgenyneu/ios-imagescroll/issues/5) in iOS 8.
 
