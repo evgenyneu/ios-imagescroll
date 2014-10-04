@@ -32,5 +32,6 @@ Please make sure:
 
 ## Thanks
 
-The wallaby photo is made by http://www.flickr.com/photos/wwarby
+* The wallaby photo is made by http://www.flickr.com/photos/wwarby
+* [cojoj](https://github.com/cojoj) for fixing [layout bug](https://github.com/evgenyneu/ios-imagescroll/issues/5) in iOS 8
 
