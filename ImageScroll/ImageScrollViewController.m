@@ -64,6 +64,9 @@
 
   self.constraintTop.constant = vPadding;
   self.constraintBottom.constant = vPadding;
+    
+  // Makes zoom out animation smooth and starting from the right point not from (0, 0)
+  [self.view layoutIfNeeded];
 }
 
 // Zoom to show as much image as possible unless image is smaller than screen
