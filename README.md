@@ -1,6 +1,6 @@
 # Image in a scroll view with auto layout for iOS in Objective-C
 
-### Note: this repository is replaced with a [newer version](https://github.com/evgenyneu/ios-imagescroll-swift) written in Swift.
+#### Note: this repository is replaced with a [newer version](https://github.com/evgenyneu/ios-imagescroll-swift) written in Swift.
 
 This is a demo iOS app that shows how to use image inside a scroll view with auto layout.
 
