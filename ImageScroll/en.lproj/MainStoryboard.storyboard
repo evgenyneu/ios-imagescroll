@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
     </dependencies>
     <scenes>
         <!--Image Scroll View Controller-->
@@ -13,49 +14,48 @@
                         <viewControllerLayoutGuide type="bottom" id="8sd-Wj-sfN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="OdA-la-nwK">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="VYT-5l-DKu">
-                                        <rect key="frame" x="110" y="234" width="100" height="100"/>
+                                        <rect key="frame" x="250" y="250" width="100" height="100"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="VYT-5l-DKu" firstAttribute="trailing" secondItem="OdA-la-nwK" secondAttribute="trailing" constant="-110" id="3NM-Ag-kuw"/>
-                                    <constraint firstItem="VYT-5l-DKu" firstAttribute="bottom" secondItem="OdA-la-nwK" secondAttribute="bottom" constant="-234" id="OJJ-2N-lik"/>
-                                    <constraint firstItem="VYT-5l-DKu" firstAttribute="leading" secondItem="OdA-la-nwK" secondAttribute="leading" constant="110" id="WP6-ke-dAB"/>
-                                    <constraint firstItem="VYT-5l-DKu" firstAttribute="top" secondItem="OdA-la-nwK" secondAttribute="top" constant="234" id="cBr-2i-6xb"/>
+                                    <constraint firstItem="VYT-5l-DKu" firstAttribute="trailing" secondItem="OdA-la-nwK" secondAttribute="trailing" constant="-1" id="3NM-Ag-kuw"/>
+                                    <constraint firstItem="VYT-5l-DKu" firstAttribute="bottom" secondItem="OdA-la-nwK" secondAttribute="bottom" constant="-1" id="OJJ-2N-lik"/>
+                                    <constraint firstItem="VYT-5l-DKu" firstAttribute="leading" secondItem="OdA-la-nwK" secondAttribute="leading" constant="250" id="WP6-ke-dAB"/>
+                                    <constraint firstItem="VYT-5l-DKu" firstAttribute="top" secondItem="OdA-la-nwK" secondAttribute="top" constant="250" id="cBr-2i-6xb"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibs-K7-hcn">
-                                <rect key="frame" x="226" y="20" width="84" height="30"/>
-                                <state key="normal" title="Small image">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.059766057480000002" green="0.1305306312" blue="0.063332435790000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUK-Xn-iCR">
+                                <rect key="frame" x="20" y="25" width="82" height="30"/>
+                                <state key="normal" title="small image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" title="Large image"/>
+                                <state key="selected" title="large image"/>
                                 <connections>
-                                    <action selector="onImageChangeTouched:" destination="2" eventType="touchUpInside" id="r72-a2-ChJ"/>
+                                    <action selector="onImageChangeTouched:" destination="2" eventType="touchUpInside" id="hSX-wr-3XG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OdA-la-nwK" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="8AI-m0-lwA"/>
+                            <constraint firstItem="cUK-Xn-iCR" firstAttribute="top" secondItem="k2f-5M-geG" secondAttribute="bottom" constant="5" id="Aea-BW-0ET"/>
+                            <constraint firstItem="cUK-Xn-iCR" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" id="FFX-qg-cOM"/>
                             <constraint firstAttribute="bottom" secondItem="OdA-la-nwK" secondAttribute="bottom" id="bWh-9q-lwl"/>
                             <constraint firstAttribute="trailing" secondItem="OdA-la-nwK" secondAttribute="trailing" id="oPh-hL-ohC"/>
-                            <constraint firstAttribute="trailing" secondItem="Ibs-K7-hcn" secondAttribute="trailing" constant="10" id="rUY-84-209"/>
-                            <constraint firstItem="Ibs-K7-hcn" firstAttribute="top" secondItem="k2f-5M-geG" secondAttribute="bottom" id="vco-Qg-Jcx"/>
                             <constraint firstItem="OdA-la-nwK" firstAttribute="top" secondItem="3" secondAttribute="top" id="zae-Ra-yiS"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
-                        <outlet property="changeImageButton" destination="Ibs-K7-hcn" id="1jy-Rl-9G3"/>
+                        <outlet property="changeImageButton" destination="cUK-Xn-iCR" id="Fhn-nx-7zX"/>
                         <outlet property="constraintBottom" destination="OJJ-2N-lik" id="5hG-aH-TXR"/>
                         <outlet property="constraintLeft" destination="WP6-ke-dAB" id="TCy-3U-jaN"/>
                         <outlet property="constraintRight" destination="3NM-Ag-kuw" id="WGY-mu-o08"/>
@@ -66,12 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-313" y="-242"/>
+            <point key="canvasLocation" x="-586.875" y="-255.63380281690138"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
