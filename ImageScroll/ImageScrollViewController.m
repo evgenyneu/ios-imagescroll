@@ -35,6 +35,8 @@
 // Update zoom scale and constraints
 // It will also animate because willAnimateRotationToInterfaceOrientation
 // is called from within an animation block
+//
+// DEPRECATION NOTICE: This method is said to be deprecated in iOS 8.0. But it still works.
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration {
   [super willAnimateRotationToInterfaceOrientation:interfaceOrientation duration:duration];
 
