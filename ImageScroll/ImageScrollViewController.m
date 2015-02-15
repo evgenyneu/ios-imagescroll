@@ -71,12 +71,10 @@
   [self.view layoutIfNeeded];
 }
 
-// Zoom to show as much image as possible unless image is smaller than screen
+// Zoom to show as much image as possible
 - (void) updateZoom {
   float minZoom = MIN(self.view.bounds.size.width / self.imageView.image.size.width,
                       self.view.bounds.size.height / self.imageView.image.size.height);
-
-  if (minZoom > 1) minZoom = 1;
 
   self.scrollView.minimumZoomScale = minZoom;
 
